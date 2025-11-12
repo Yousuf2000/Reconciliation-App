@@ -6,7 +6,7 @@ from datetime import datetime
 import os
 
 app = Flask(__name__)
-
+app.secret_key = "Yousuf@123"
 # Store processed data in memory per user session
 processed_data = {}  # key: session_id, value: DataFrame
 
@@ -243,7 +243,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
 """
 
-# ---------- Utilities ----------
 def allowed_file(filename):
     return "." in filename and filename.rsplit(".", 1)[1].lower() in ALLOWED_EXTENSIONS
 
@@ -283,7 +282,6 @@ def run_reconciliation(df):
                 break
     return pd.DataFrame(records)
 
-# ---------- Routes ----------
 @app.route("/", methods=["GET", "POST"])
 def index():
     processed = False
