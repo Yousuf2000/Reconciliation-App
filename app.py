@@ -6,7 +6,6 @@ from datetime import datetime
 import os
 
 app = Flask(__name__)
-app.secret_key = os.urandom(24)
 
 # Store processed data in memory per user session
 processed_data = {}  # key: session_id, value: DataFrame
@@ -387,5 +386,6 @@ def download_complete():
 
 if __name__=="__main__":
     app.run(debug=True)
+
 
 
