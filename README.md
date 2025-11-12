@@ -34,13 +34,6 @@ Download filtered results or complete reconciliation as Excel files.
 
 Each user session stores its own processed dataset in memory.
 
-📂 Folder Structure
-ReconciliationApp/
-│
-├── app.py                # Main Flask application file
-├── requirements.txt      # Required Python packages
-└── README.md             # Documentation (this file)
-
 
 
 📤 How to Use
